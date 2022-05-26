@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 
 <%@ page import="java.util.List"%>
 <%@ page import="com.javaex.dao.PhoneDao"%>
@@ -12,7 +12,6 @@
 	System.out.println(personList);
 	
 %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,14 +20,14 @@
 </head>
 <body>
 	<h1>전화번호부</h1>
-	<h2>저장 후 리스트</h2>
-
-	<p>입력한 정보 내역입니다.</p>
+	<h2>등록폼</h2>
+	
 	<%for(int i = 0 ; i < personList.size() ; i++){%>
+		<form action="./delete.jsp" method="get">
 		<table border="1">
 			<tr>
 				<td>이름(name)</td>
-				<td><%=personList.get(i).getName()%></td>
+				<td><%=personList.get(i).getName() + "(" + personList.get(i).getPersonId() + ")"%></td>
 			</tr>
 			<tr>
 				<td>핸드폰(hp)</td>
@@ -38,10 +37,14 @@
 				<td>회사(company)</td>
 				<td><%=personList.get(i).getHp() %></td>
 			</tr>
+			<tr>
+				<td></td>
+				<td><button type="submit" name="personId" value="<%=personList.get(i).getPersonId()%>">삭제</button></td>
+			</tr>
 	</table>
+	</form>
 	<br>
 	<%}%>
-	<a href="./WriteForm.jsp">추가번호 등록</a>
-
+	
 </body>
 </html>
