@@ -7,9 +7,9 @@
 </head>
 <body>
 	<h1>전화번호부</h1>
-	<h2>등록폼</h2>
-	<p>전화번호를 등록하려면<br>
-		아래 항목을 기입하고 등록 버튼을 눌러주세요.</p>
+	<h2>수정폼</h2>
+	<p>전화번호를 수정하려면<br>
+		아래 항목을 기입하고 수정 버튼을 눌러주세요.</p>
 	<form action="./update.jsp" method="get">
 	이름(name) <input type="text" name="name" value=""><br>
 	핸드폰(hp) <input type="text" name="hp" value=""><br>

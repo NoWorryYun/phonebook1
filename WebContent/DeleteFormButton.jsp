@@ -20,7 +20,7 @@
 </head>
 <body>
 	<h1>전화번호부</h1>
-	<h2>등록폼</h2>
+	<h2>삭제폼</h2>
 	
 	<%for(int i = 0 ; i < personList.size() ; i++){%>
 		<form action="./delete.jsp" method="get">
